@@ -31,18 +31,20 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <!--Other dependencies version-->
         <spring.version>4.3.3.RELEASE</spring.version>
+        <log4j.version>2.7</log4j.version>
+        <servlet.version>3.1.0</servlet.version>
+        <mybatis.version>3.4.1</mybatis.version>
+        <mybatis-spring.version>1.3.0</mybatis-spring.version>
+        <mysql.version>6.0.5</mysql.version>
+        <com.alibaba.druid.version>1.0.26</com.alibaba.druid.version>
+        <slf4j.version>1.7.21</slf4j.version>
         <!--<commons-lang.version>2.6</commons-lang.version>-->
         <!--<commons-io.version>2.4</commons-io.version>-->
         <!--<commons-fileupload.version>1.3.1</commons-fileupload.version>-->
-        <!--<slf4j.version>1.7.13</slf4j.version>-->
-        <log4j.version>2.7</log4j.version>
         <!--<junit.version>4.12</junit.version>-->
         <!--<jstl.version>1.2</jstl.version>-->
-        <servlet.version>3.1.0</servlet.version>
         <!--<jackson.version>2.7.0</jackson.version>-->
         <!--<commons-dbcp.version>1.4</commons-dbcp.version>-->
-        <mybatis.version>3.4.1</mybatis.version>
-        <mybatis-spring.version>1.3.0</mybatis-spring.version>
         <!--<mybatis-java-time.version>0.2</mybatis-java-time.version>-->
         <!--<mybatis-generator.version>1.3.2</mybatis-generator.version>-->
     </properties>
@@ -84,12 +86,14 @@
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${servlet.version}</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
         <dependency>
             <groupId>org.mybatis</groupId>
@@ -102,6 +106,27 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
             <version>${mybatis-spring.version}</version>
+        </dependency>
+
+        <!--Database-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!--druid==>阿里巴巴数据库连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${com.alibaba.druid.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
 
 
